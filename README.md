@@ -201,5 +201,5 @@ An alternative way to deploy the application is by using a different Docker Comp
 1. download a docker-compose-alt.yml
 2. run the command
 ```code
-docker-compose -f docker-compose-alt.yml up -d
+docker-compose -f docker-compose-alt.yml up
 ```
