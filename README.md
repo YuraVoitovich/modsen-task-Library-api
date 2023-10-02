@@ -1,3 +1,7 @@
+# Library API
+
+This is a test project for the Modsen company.
+
 # Microservice Overview
 
 ## Netflix Eureka Discovery Service
@@ -29,6 +33,26 @@ reference: https://github.com/YuraVoitovich/book-service
 Library Service is a microservice designed to manage the borrowing and return of books within your application ecosystem. It plays a crucial role in keeping track of when books are borrowed and their expected return dates.
 
 reference: https://github.com/YuraVoitovich/library-service
+
+
+# Technologies
+- Java 11
+- Maven
+- Spring Boot
+- Spring Security
+- Spring Data JPA
+- Spring Web
+- Spring Cloud Config
+- Jakarta Persistence (JPA)
+- Hibernate
+- Docker
+- Docker Compose
+- Kafka
+- PostgreSQL
+- MapStruct
+- Testcontainers
+- Lombok
+- Swagger
 
 
 # API Reference
@@ -145,30 +169,26 @@ Requires authentication with 'modsen-user' role.
 Most endpoints require authentication with specific roles ('modsen-user' or 'modsen-admin') to access the functionality. Ensure proper user roles are assigned for each endpoint to maintain security and access control.
 # Booting 
 
-You should run 
-```code
-  git clone "project path".
+1. Begin by cloning all the necessary projects from version control repository. Use ```git clone``` to download the project source code to your local machine.
+
+
+2. Navigate to the root directory of each project you've cloned. Build the projects using Maven by running the following command in each project's directory:
 ```
-to clone all nessary mecroservices.
-
-Then you should run maven instruction to build a .jar file for all related microservices:
-
-```code
-  mvn clean package
+mvn clean install
 ```
+This will compile the source code, run tests, and package the application into a JAR file.
 
-Then you should buid docker images for all microservices, running docker command: 
 
+3. Use the Docker command-line tool to build Docker images from your Dockerfiles. Navigate to the directory containing the Dockerfile for each project and run:
 
 ```code
-  docker build -t "image name" "Dockerfile path"
+  docker build -t "image-name" .
 ```
-You should use image names that are described in the docker-compose.yml, or use your names and change docker images names in the docker-compose.yml
+Use the image names specified in the docker-compose.yml file or use your own names. However, if you choose the latter option, you will need to update the corresponding names in the docker-compose.yml file.
 
-Then you should run: 
+4. Open a terminal or command prompt in the directory containing the docker-compose.yml file. Run the following command to start all the services defined in the docker-compose.yml file:
 
 ```code
   docker-compose up
 ```
-
 
