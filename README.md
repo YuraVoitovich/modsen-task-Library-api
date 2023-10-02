@@ -191,4 +191,5 @@ Use the image names specified in the docker-compose.yml file or use your own nam
 ```code
   docker-compose up
 ```
+5.  Set up Keycloak environment using realm-export.json file.
 
