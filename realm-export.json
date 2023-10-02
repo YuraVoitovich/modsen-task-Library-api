@@ -817,48 +817,6 @@
         "microprofile-jwt"
       ],
       "authorizationSettings": {
-        "allowRemoteResourceManagement": true,
-        "policyEnforcementMode": "ENFORCING",
-        "resources": [
-          {
-            "name": "Default Resource",
-            "type": "urn:modsen-client:resources:default",
-            "ownerManagedAccess": false,
-            "attributes": {},
-            "_id": "7a1117c2-5c53-4691-a2f8-a7f7fd0a6559",
-            "uris": [
-              "/*"
-            ]
-          }
-        ],
-        "policies": [
-          {
-            "id": "0ebf5c1a-cf8f-448a-a981-dd6058d94103",
-            "name": "Default Policy",
-            "description": "A policy that grants access only for users within this realm",
-            "type": "js",
-            "logic": "POSITIVE",
-            "decisionStrategy": "AFFIRMATIVE",
-            "config": {
-              "code": "// by default, grants any permission associated with this policy\n$evaluation.grant();\n"
-            }
-          },
-          {
-            "id": "48bbd635-5000-4229-a761-e6d5d4b83892",
-            "name": "Default Permission",
-            "description": "A permission that applies to the default resource type",
-            "type": "resource",
-            "logic": "POSITIVE",
-            "decisionStrategy": "UNANIMOUS",
-            "config": {
-              "defaultResourceType": "urn:modsen-client:resources:default",
-              "applyPolicies": "[\"Default Policy\"]"
-            }
-          }
-        ],
-        "scopes": [],
-        "decisionStrategy": "UNANIMOUS"
-      }
     },
     {
       "id": "faa9cf8d-8fb7-4c95-8c01-cdc5996fa2df",
