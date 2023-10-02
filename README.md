@@ -167,7 +167,7 @@ Requires authentication with 'modsen-user' role.
 
 # Authetication 
 Most endpoints require authentication with specific roles ('modsen-user' or 'modsen-admin') to access the functionality. Ensure proper user roles are assigned for each endpoint to maintain security and access control.
-# Booting 
+# Installation 
 
 1. Begin by cloning all the necessary projects from version control repository. Use ```git clone``` to download the project source code to your local machine.
 
