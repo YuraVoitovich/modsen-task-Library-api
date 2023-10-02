@@ -193,3 +193,13 @@ Use the image names specified in the docker-compose.yml file or use your own nam
 ```
 5.  Set up Keycloak environment using realm-export.json file.
 
+
+# Another way to boot the project
+
+An alternative way to deploy the application is by using a different Docker Compose file. This alternate Compose file can be configured to pull the required Docker images directly from Docker Hub, eliminating the need to build the images locally. 
+
+1. download a docker-compose-alt.yml
+2. run the command
+```code
+docker-compose -f docker-compose-alt.yml up -d
+```
